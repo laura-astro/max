@@ -1,6 +1,6 @@
 # Max
 
-(.max) Archive Reader and Sorter
+(.max) File Reader and Sorter
 
 This is a short python program that helps you sort out the useful lines in the archive from max. Below are a few lines of code for when you run this program on a Linux terminal, simply to clean the table and make it more accessible.
 
