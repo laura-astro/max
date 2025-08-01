@@ -36,9 +36,9 @@ You can search through the original max table based on the "Y Max" column and co
 ## Parameters
 
 - Data file: example.max  
-- X Column: 0  
-- Y Column: 2 (if you keep the period column in the original file, otherwise use 1)  
-- Minimum A0 value (fap): use the first 3 digits or less (use 1.66 instead of 1.6659841) or round it to an approximate value such as 1.7, I suggest the approximation or an integer  
-- Minimum length (X units): when the peaks are very close together and are not part of the same peak when you zoom in, use 1; when you zoom in and notice one peak is made of many smaller peaks forming a Gaussian curve, then it has to be more ample, use 4 or 5.
+- X Column: **0**  
+- Y Column: **2** (if you keep the period column in the original file, otherwise use 1)  
+- Minimum A0 value (fap): use the first 3 digits or less (use **1.66** instead of 1.6659841) or round it to an approximate value such as **1.7**, I suggest the approximation or an integer  
+- Minimum length (X units): when the peaks are very close together and are not part of the same peak when you zoom in, use **1**; when you zoom in and notice one peak is made of many smaller peaks forming a Gaussian curve, then it has to be more ample, use **4 or 5**.
 
-_*In the graph above, the minimum length was 5._
+_*In the graph above, the fap was 4 and the minimum length was 5._
