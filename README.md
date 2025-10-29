@@ -38,7 +38,7 @@ You can search through the table based on the "Y Max" column and compare it to t
 Call max.py on your terminal
 
 ```bash
-python max.file
+python max.py
 ```
 
 - Data file: example.max  
