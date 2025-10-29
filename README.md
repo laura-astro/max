@@ -44,7 +44,7 @@ python max.py
 - Data file: example.max  
 - X Column: **0** [muHz]
 - Y Column: **2** [mma] (if you keep the period column in the original file, otherwise use 1)  
-- Minimum A0 value [fap]: 0.658  
-- Minimum length (X units) [fap]: 0.658
+- Threshold A0 value [fap]: 0.658
+- Minimum peak width (default 0.1) [fap]: 0.658
 
 And follow the exact same steps for the .fmax file.
