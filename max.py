@@ -7,31 +7,31 @@ def load_data(file, col_x=0, col_y=1):
     return data[:, col_x], data[:, col_y]
 
 def find_all_peaks(x, y, A0, min_width=0.1):
-    """Encontra todos os pontos acima de A0, tratando cada um como pico potencial"""
+    """ This finds all peaks above the A0 (fap), or potential peaks. """
     above_threshold = np.where(y > A0)[0]
     peaks = []
     
     for idx in above_threshold:
-        # Considera cada ponto acima do limiar como um pico separado
+        # This considers each point above the edge like a separate peak
         peaks.append({
             'left': idx,
             'right': idx,
             'max': idx
         })
     
-    # Junta picos muito próximos (menos que min_width de distância)
+    # This adds together peaks extremely close (shorter than min_width in distance)
     merged_peaks = []
     if peaks:
         current_peak = peaks[0].copy()
         
         for peak in peaks[1:]:
             if x[peak['left']] - x[current_peak['right']] < min_width:
-                # Junta com o pico anterior
+                # This combines it with the previous peak
                 current_peak['right'] = peak['right']
                 if y[peak['max']] > y[current_peak['max']]:
                     current_peak['max'] = peak['max']
             else:
-                # Adiciona o pico atual e começa novo
+                # This adds the current peak and starts anew
                 merged_peaks.append(current_peak)
                 current_peak = peak.copy()
         
@@ -61,20 +61,20 @@ def analyze_peaks(x, y, peaks, A0):
 def display_results(x, y, results, A0):
     plt.figure(figsize=(14, 7))
     
-    # Plot dos dados originais
+    # This plots the original data
     plt.plot(x, y, 'b-', label='Original data', alpha=0.7, linewidth=1)
     plt.axhline(y=A0, color='r', linestyle='--', label=f'Threshold A0 = {A0:.4f}')
     
-    # Destaque para os picos válidos
+    # This highlights valid peaks
     for res in results:
         if res['valid']:
-            # Linha vertical no máximo do pico
+            # Vertical line when the peak is maximum
             plt.axvline(x=res['x_max'], color='g', linestyle=':', alpha=0.5)
             
-            # Ponto no máximo do pico
+            # Dot when the peak is maximum
             plt.plot(res['x_max'], res['y_max'], 'ro', markersize=6)
             
-            # Texto com informações
+            # Text with info
             plt.text(res['x_max'], res['y_max'], 
                     f"Peak {res['peak_id']}\nX: {res['x_max']:.2f}\nY: {res['y_max']:.2f}",
                     ha='left', va='bottom', fontsize=8,
@@ -86,7 +86,7 @@ def display_results(x, y, results, A0):
     plt.legend()
     plt.grid(True)
     
-    # Tabela de resultados
+    # Table of results
     print("\nPEAK DETECTION RESULTS")
     print("="*90)
     print("{:<6} {:<12} {:<12} {:<12} {:<12} {:<12} {:<12}".format(
