@@ -24,15 +24,6 @@ Notice that this example only removes column 2. If you're interested in backing 
 cp example.max backup-example.max
 ```
 
-## Results
-
-The program will generate both a graph and a table simultaneously, so you can compare the results.
-
-![graph](https://github.com/laura-astro/max/blob/main/graph.png)
-![terminal](https://github.com/laura-astro/max/blob/main/linux-terminal.png)
-
-You can search through the table based on the "Y Max" column and compare it to the "X Max" column to make sure they match. The generated table displays 3 decimal numbers, unlike the original file, so mind the roundings.
-
 ## Parameters
 
 Call max.py on your terminal
@@ -48,3 +39,15 @@ python max.py
 - Minimum peak width (default 0.1) [fap]: 0.658
 
 And follow the exact same steps for the .fmax file.
+
+## Results
+
+The program will generate both a graph and a table simultaneously, so you can compare the results.
+
+![table](./max-table.png)
+
+![table](https://github.com/laura-astro/max/blob/main/max-table.png)
+![graph](https://github.com/laura-astro/max/blob/main/max-graph.png)
+![zoom](https://github.com/laura-astro/max/blob/main/max-zoom.png)
+
+You can search through the table based on the "Y Max" and "X Max" columns and compare the results with example.max to make sure they match. The generated table displays 3 decimal numbers, unlike the original file, so mind the roundings.
