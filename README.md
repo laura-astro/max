@@ -44,6 +44,8 @@ And follow the exact same steps for the .fmax file.
 
 The program will generate both a graph and a table simultaneously, so you can compare the results.
 
+![Max graph](max-graph.png)
+
 ![table](https://github.com/laura-astro/max/blob/main/max-table.png)
 ![graph](https://github.com/laura-astro/max/blob/main/max-graph.png)
 ![zoom](https://github.com/laura-astro/max/blob/main/max-zoom.png)
