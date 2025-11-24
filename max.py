@@ -1,4 +1,4 @@
-# Max Sorter written in 2025 by Laura C. Sultan
+# (.max) File Reader & Sorter written in 2025 by Laura C. Sultan
 
 import numpy as np
 from scipy.signal import find_peaks
