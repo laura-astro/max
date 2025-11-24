@@ -49,3 +49,5 @@ The program will generate both a graph and a table simultaneously, so you can co
 ![zoom](https://github.com/laura-astro/max/blob/main/max-zoom.png)
 
 You can search through the table based on the "Y Max" and "X Max" columns and compare the results with example.max to make sure they match. The generated table displays 3 decimal numbers, unlike the original file, so mind the roundings.
+
+Laura C. Sultan © 2025
