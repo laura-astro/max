@@ -12,7 +12,7 @@ Use this line of code to get rid of the blank spaces:
 sed -i 's/^[ \t]*//' example.max
 ```
 
-Use this line of code to remove whichever line you'd like:
+Use this line of code to remove whichever column you'd like:
 
 ```bash
 awk '{$2=""; $0=$0; print}' example.max > tmp && mv tmp example.max
